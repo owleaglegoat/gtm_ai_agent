@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>GTM MVP</title>
+  <link rel="stylesheet" href="/static/app.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>GTM MVP (No Node)</h1>
+    <p class="sub">Paste opportunity/brief → run Qualify / Proposal / Pricing.</p>
+
+    <textarea id="brief" placeholder="Paste CRM opportunity / client brief here..."></textarea>
+
+    <div class="row">
+      <label class="label" for="apiBase">API Base (if opening file://)</label>
+      <input id="apiBase" type="text" value="http://127.0.0.1:8000" />
+    </div>
+
+    <div class="row">
+      <button onclick="runMVP('qualify')">Qualify (BANT-C)</button>
+      <button onclick="runMVP('proposal')">Proposal Draft</button>
+      <button onclick="runMVP('pricing')">Pricing Pack</button>
+    </div>
+
+    <div class="card">
+      <h3>Summary</h3>
+      <pre id="summary"></pre>
+    </div>
+
+    <div class="card">
+      <h3>Raw JSON</h3>
+      <pre id="json"></pre>
+    </div>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
